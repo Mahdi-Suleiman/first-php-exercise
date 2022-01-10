@@ -24,13 +24,10 @@
             // echo ucwords($_POST['input']);
 
             #ex 2
-            // echo number_format((int)$_POST['input'], 2, ":", "");
-            // $myDateFormat = date("h:i:s", (int)$_POST['input']);
-            // echo date_format($_POST['input'], "h:i:s");
-            // echo var_dump($numbersArray);
 
-            // $numbersArray = str_split($_POST['input'], 2);
-            // echo implode(":", $numbersArray);
+
+            $numbersArray = str_split($_POST['input'], 2);
+            echo implode(":", $numbersArray);
 
             #ex 3
             // $needle = "Orange";
