@@ -20,50 +20,72 @@
 </head>
 
 <body>
+    <hr>
+    <h2>ex 1</h2>
     <?php
-
-    //1
-    echo "<h1>1</h1>";
-    echo "<p>";
-    for ($i = 1; $i < 11; $i++) {
-        if ($i === 10)
-            echo $i;
-        else
-            echo $i . "-";
+    $input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    foreach ($input as $key => $value) {
+        echo "$value ";
     }
-    echo "</p>";
+    ?>
 
-    //2
-    echo "<h1>2</h1>";
+    <hr>
+    <h2>ex 2</h2>
+    <?php
     $sum = 0;
     for ($i = 0; $i <= 30; $i++) {
         $sum += $i;
     }
-    echo "<p>total = $sum</p>";
+    echo $sum;
+    ?>
 
-    //3
-    echo "<h1>3</h1>";
-    $str3 = 'A';
-    for ($i = 1; $i <= 5; $i++) {
-        for ($j = 5 - $i; $j > 0; $j--)
+    <hr>
+    <h2>ex 3</h2>
+    <?php
+    $output = 'A';
+
+    for ($rows = 1; $rows <= 5; $rows++) {
+        for ($columns = 5 - $rows; $columns > 0; $columns--) {
             echo "A ";
-        for ($k = 1; $k <= $i; $k++)
-            echo "$str3 ";
-        echo "<br>";
-        $str3++;
+        }
+        for ($cell = 0; $cell < $rows; $cell++) {
+            echo "$output ";
+        }
+        $output++;
+        echo "<br/>";
     }
 
-    //4
-    echo "<h1>4</h1>";
-    $str3 = 1;
-    for ($i = 1; $i <= 5; $i++) {
-        for ($j = 5 - $i; $j > 0; $j--)
+    // for ($i = 0; $i < 5; $i++) {
+    //     for ($j = 5 - $i; $j > 0; $j--) {
+    //         // echo "A ";
+    //         for ($k = $j; $k <= $j; $k++) {
+    //             echo "$output ";
+    //         }
+    //         // echo "$output ";
+    //     }
+    //     echo "<br/>";
+    //     $output++;
+    // }
+    ?>
+
+    <hr>
+    <h2>ex 4</h2>
+    <?php
+    $output = 1;
+
+    for ($rows = 1; $rows <= 5; $rows++) {
+        for ($columns = 5 - $rows; $columns > 0; $columns--) {
             echo "1 ";
-        for ($k = 1; $k <= $i; $k++)
-            echo "$str3 ";
-        echo "<br>";
-        $str3++;
+        }
+        for ($cell = 0; $cell < $rows; $cell++) {
+            echo "$output ";
+        }
+        $output++;
+        echo "<br/>";
     }
+    ?>
+
+    <?php
 
     //5
     echo "<h1>5</h1>";
@@ -163,13 +185,8 @@
             }
         }
     }
-
-
-
-
-
-
     ?>
+
 </body>
 
 </html>
